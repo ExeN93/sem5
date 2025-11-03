@@ -36,13 +36,13 @@ long long iteration_count[512] = {0};
 // Funkcja generująca odcień niebieskiego dla danego wątku
 void get_thread_color(int tid, int num_threads, unsigned char &r, unsigned char &g, unsigned char &b) {
     if (num_threads == 1) {
-        r = 0; g = 77; b = 255;
+        r = 0; g = 255; b = 0;
         return;
     }
     float intensity = 50.0f + (205.0f * tid) / (num_threads - 1);
     r = 0;
-    g = (unsigned char)(intensity * 0.3f);
-    b = (unsigned char)intensity;
+    g = intensity;;
+    b = 0;;
 }
 
 // ==================== METODA 1: PODZIAŁ NA BLOKI ====================

@@ -1,0 +1,478 @@
+========================================
+MANDELBROT SET - TESTY RÓWNOLEGŁOŚCI
+Rozmiar: 6400x6400
+Max iteracji: 200
+========================================
+
+METODA 1: PODZIAŁ NA BLOKI (każdy wątek ma swój ciągły zakres wierszy)
+------------------------------------------------------------------------
+Wątków:   1 | Czas: 2.348s
+Wątków:   2 | Czas: 1.182s
+   Rozkład iteracji na wątek:
+      Wątek   0:    450979589 ( 49.96%) ████████████████████████
+      Wątek   1:    451702546 ( 50.04%) █████████████████████████
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         451341068 iteracji/wątek
+      Min (wątek 0):   450979589 (49.96% całości)
+      Max (wątek 1):   451702546 (50.04% całości)
+      Odch. std.:      361478
+      Balans:          99.84% (min/max ratio)
+      Ocena balansu:   ✓ DOSKONAŁY
+Wątków:   4 | Czas: 1.163s
+   Rozkład iteracji na wątek:
+      Wątek   0:     18246087 (  2.02%) █
+      Wątek   1:    432733502 ( 47.94%) ███████████████████████
+      Wątek   2:    433443582 ( 48.02%) ████████████████████████
+      Wątek   3:     18258964 (  2.02%) █
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         225670534 iteracji/wątek
+      Min (wątek 0):   18246087 (2.02% całości)
+      Max (wątek 2):   433443582 (48.02% całości)
+      Odch. std.:      207418160
+      Balans:          4.21% (min/max ratio)
+      Ocena balansu:   ✗✗ KATASTROFA
+Wątków:   8 | Czas: 0.949s
+   Rozkład iteracji na wątek:
+      Wątek   0:      7438787 (  0.82%) 
+      Wątek   1:     10807300 (  1.20%) 
+      Wątek   2:     88452548 (  9.80%) ████
+      Wątek   3:    344280954 ( 38.14%) ███████████████████
+      Wątek   4:    344716569 ( 38.19%) ███████████████████
+      Wątek   5:     88727013 (  9.83%) ████
+      Wątek   6:     10815944 (  1.20%) 
+      Wątek   7:      7443020 (  0.82%) 
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         112835267 iteracji/wątek
+      Min (wątek 0):   7438787 (0.82% całości)
+      Max (wątek 4):   344716569 (38.19% całości)
+      Odch. std.:      137634190
+      Balans:          2.16% (min/max ratio)
+      Ocena balansu:   ✗✗ KATASTROFA
+Wątków:  16 | Czas: 0.585s
+   Rozkład iteracji na wątek:
+      Wątek   0:      3395567 (  0.38%) 
+      Wątek   1:      4043220 (  0.45%) 
+      Wątek   2:      4532565 (  0.50%) 
+      Wątek   3:      6274735 (  0.70%) 
+      Wątek   4:     17635471 (  1.95%) 
+      Wątek   5:     70817077 (  7.85%) ███
+      Wątek   6:    138917409 ( 15.39%) ███████
+      Wątek   7:    205363545 ( 22.75%) ███████████
+      Wątek   8:    205657116 ( 22.78%) ███████████
+      Wątek   9:    139059453 ( 15.41%) ███████
+      Wątek  10:     71020405 (  7.87%) ███
+      Wątek  11:     17706608 (  1.96%) 
+      Wątek  12:      6281120 (  0.70%) 
+      Wątek  13:      4534824 (  0.50%) 
+      Wątek  14:      4044354 (  0.45%) 
+      Wątek  15:      3398666 (  0.38%) 
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         56417633 iteracji/wątek
+      Min (wątek 0):   3395567 (0.38% całości)
+      Max (wątek 8):   205657116 (22.78% całości)
+      Odch. std.:      72040194
+      Balans:          1.65% (min/max ratio)
+      Ocena balansu:   ✗✗ KATASTROFA
+Wątków:  32 | Czas: 0.383s
+   Rozkład iteracji na wątek:
+      Wątek   0:      1577699 (  0.17%) 
+      Wątek   1:      1817868 (  0.20%) 
+      Wątek   2:      1965340 (  0.22%) 
+      Wątek   3:      2077880 (  0.23%) 
+      Wątek   4:      2169126 (  0.24%) 
+      Wątek   5:      2363439 (  0.26%) 
+      Wątek   6:      2761682 (  0.31%) 
+      Wątek   7:      3513053 (  0.39%) 
+      Wątek   8:      4422247 (  0.49%) 
+      Wątek   9:     13213224 (  1.46%) 
+      Wątek  10:     19083162 (  2.11%) █
+      Wątek  11:     51733915 (  5.73%) ██
+      Wątek  12:     63612754 (  7.05%) ███
+      Wątek  13:     75304655 (  8.34%) ████
+      Wątek  14:     97832191 ( 10.84%) █████
+      Wątek  15:    107531354 ( 11.91%) █████
+      Wątek  16:    107743708 ( 11.94%) █████
+      Wątek  17:     97913408 ( 10.85%) █████
+      Wątek  18:     75397968 (  8.35%) ████
+      Wątek  19:     63661485 (  7.05%) ███
+      Wątek  20:     51850714 (  5.74%) ██
+      Wątek  21:     19169691 (  2.12%) █
+      Wątek  22:     13266971 (  1.47%) 
+      Wątek  23:      4439637 (  0.49%) 
+      Wątek  24:      3517007 (  0.39%) 
+      Wątek  25:      2764113 (  0.31%) 
+      Wątek  26:      2365284 (  0.26%) 
+      Wątek  27:      2169540 (  0.24%) 
+      Wątek  28:      2078382 (  0.23%) 
+      Wątek  29:      1965972 (  0.22%) 
+      Wątek  30:      1818740 (  0.20%) 
+      Wątek  31:      1579926 (  0.18%) 
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         28208817 iteracji/wątek
+      Min (wątek 0):   1577699 (0.17% całości)
+      Max (wątek 16):   107743708 (11.94% całości)
+      Odch. std.:      36612937
+      Balans:          1.46% (min/max ratio)
+      Ocena balansu:   ✗✗ KATASTROFA
+Wątków:  64 | Czas: 0.334s
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         14104408 iteracji/wątek
+      Min (wątek 0):   745329 (0.08% całości)
+      Max (wątek 32):   55322634 (6.13% całości)
+      Odch. std.:      18344805
+      Balans:          1.35% (min/max ratio)
+      Ocena balansu:   ✗✗ KATASTROFA
+Wątków: 128 | Czas: 0.316s
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         7052204 iteracji/wątek
+      Min (wątek 0):   357027 (0.04% całości)
+      Max (wątek 64):   27982067 (3.10% całości)
+      Odch. std.:      9181480
+      Balans:          1.28% (min/max ratio)
+      Ocena balansu:   ✗✗ KATASTROFA
+Wątków: 512 - POMINIĘTO (iYmax musi być podzielne)
+
+METODA 2: ROLETA (round-robin: wątek i bierze wiersze i, i+n, i+2n, ...)
+------------------------------------------------------------------------
+Wątków:   1 | Czas: 2.336s
+Wątków:   2 | Czas: 1.180s
+   Rozkład iteracji na wątek:
+      Wątek   0:    451417355 ( 50.01%) █████████████████████████
+      Wątek   1:    451264780 ( 49.99%) ████████████████████████
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         451341068 iteracji/wątek
+      Min (wątek 1):   451264780 (49.99% całości)
+      Max (wątek 0):   451417355 (50.01% całości)
+      Odch. std.:      76288
+      Balans:          99.97% (min/max ratio)
+      Ocena balansu:   ✓ DOSKONAŁY
+Wątków:   4 | Czas: 0.619s
+   Rozkład iteracji na wątek:
+      Wątek   0:    225789138 ( 25.01%) ████████████
+      Wątek   1:    225632389 ( 25.00%) ████████████
+      Wątek   2:    225628217 ( 25.00%) ████████████
+      Wątek   3:    225632391 ( 25.00%) ████████████
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         225670534 iteracji/wątek
+      Min (wątek 2):   225628217 (25.00% całości)
+      Max (wątek 0):   225789138 (25.01% całości)
+      Odch. std.:      68497
+      Balans:          99.93% (min/max ratio)
+      Ocena balansu:   ✓ DOSKONAŁY
+Wątków:   8 | Czas: 0.353s
+   Rozkład iteracji na wątek:
+      Wątek   0:    112996350 ( 12.52%) ██████
+      Wątek   1:    112832552 ( 12.50%) ██████
+      Wątek   2:    112814108 ( 12.50%) ██████
+      Wątek   3:    112799840 ( 12.50%) ██████
+      Wątek   4:    112792788 ( 12.50%) ██████
+      Wątek   5:    112799837 ( 12.50%) ██████
+      Wątek   6:    112814109 ( 12.50%) ██████
+      Wątek   7:    112832551 ( 12.50%) ██████
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         112835267 iteracji/wątek
+      Min (wątek 4):   112792788 (12.50% całości)
+      Max (wątek 0):   112996350 (12.52% całości)
+      Odch. std.:      62423
+      Balans:          99.82% (min/max ratio)
+      Ocena balansu:   ✓ DOSKONAŁY
+Wątków:  16 | Czas: 0.297s
+   Rozkład iteracji na wątek:
+      Wątek   0:     56569552 (  6.27%) ███
+      Wątek   1:     56408033 (  6.25%) ███
+      Wątek   2:     56405390 (  6.25%) ███
+      Wątek   3:     56388548 (  6.25%) ███
+      Wątek   4:     56396394 (  6.25%) ███
+      Wątek   5:     56411292 (  6.25%) ███
+      Wątek   6:     56408719 (  6.25%) ███
+      Wątek   7:     56424518 (  6.25%) ███
+      Wątek   8:     56426798 (  6.25%) ███
+      Wątek   9:     56424519 (  6.25%) ███
+      Wątek  10:     56408718 (  6.25%) ███
+      Wątek  11:     56411292 (  6.25%) ███
+      Wątek  12:     56396394 (  6.25%) ███
+      Wątek  13:     56388545 (  6.25%) ███
+      Wątek  14:     56405390 (  6.25%) ███
+      Wątek  15:     56408033 (  6.25%) ███
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         56417633 iteracji/wątek
+      Min (wątek 13):   56388545 (6.25% całości)
+      Max (wątek 0):   56569552 (6.27% całości)
+      Odch. std.:      40755
+      Balans:          99.68% (min/max ratio)
+      Ocena balansu:   ✓ DOSKONAŁY
+Wątków:  32 | Czas: 0.301s
+   Rozkład iteracji na wątek:
+      Wątek   0:     28333548 (  3.14%) █
+      Wątek   1:     28187098 (  3.12%) █
+      Wątek   2:     28193127 (  3.12%) █
+      Wątek   3:     28184620 (  3.12%) █
+      Wątek   4:     28201546 (  3.12%) █
+      Wątek   5:     28204763 (  3.12%) █
+      Wątek   6:     28202791 (  3.12%) █
+      Wątek   7:     28215899 (  3.13%) █
+      Wątek   8:     28213399 (  3.13%) █
+      Wątek   9:     28208619 (  3.12%) █
+      Wątek  10:     28205928 (  3.12%) █
+      Wątek  11:     28206529 (  3.12%) █
+      Wątek  12:     28194848 (  3.12%) █
+      Wątek  13:     28203925 (  3.12%) █
+      Wątek  14:     28212263 (  3.13%) █
+      Wątek  15:     28220935 (  3.13%) █
+      Wątek  16:     28236004 (  3.13%) █
+      Wątek  17:     28220935 (  3.13%) █
+      Wątek  18:     28212263 (  3.13%) █
+      Wątek  19:     28203928 (  3.12%) █
+      Wątek  20:     28194848 (  3.12%) █
+      Wątek  21:     28206529 (  3.12%) █
+      Wątek  22:     28205928 (  3.12%) █
+      Wątek  23:     28208619 (  3.12%) █
+      Wątek  24:     28213399 (  3.13%) █
+      Wątek  25:     28215900 (  3.13%) █
+      Wątek  26:     28202790 (  3.12%) █
+      Wątek  27:     28204763 (  3.12%) █
+      Wątek  28:     28201546 (  3.12%) █
+      Wątek  29:     28184620 (  3.12%) █
+      Wątek  30:     28193127 (  3.12%) █
+      Wątek  31:     28187098 (  3.12%) █
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         28208817 iteracji/wątek
+      Min (wątek 3):   28184620 (3.12% całości)
+      Max (wątek 0):   28333548 (3.14% całości)
+      Odch. std.:      25025
+      Balans:          99.47% (min/max ratio)
+      Ocena balansu:   ✓ DOSKONAŁY
+Wątków:  64 | Czas: 0.299s
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         14104408 iteracji/wątek
+      Min (wątek 32):   14072380 (1.56% całości)
+      Max (wątek 0):   14261168 (1.58% całości)
+      Odch. std.:      25281
+      Balans:          98.68% (min/max ratio)
+      Ocena balansu:   ✓ DOSKONAŁY
+Wątków: 128 | Czas: 0.299s
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         7052204 iteracji/wątek
+      Min (wątek 63):   6996717 (0.78% całości)
+      Max (wątek 0):   7261400 (0.80% całości)
+      Odch. std.:      41515
+      Balans:          96.35% (min/max ratio)
+      Ocena balansu:   ✓ DOSKONAŁY
+Wątków: 512 | Czas: 0.295s
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         1763051 iteracji/wątek
+      Min (wątek 99):   1656234 (0.18% całości)
+      Max (wątek 128):   1848960 (0.20% całości)
+      Odch. std.:      66082
+      Balans:          89.58% (min/max ratio)
+      Ocena balansu:   ✓ Bardzo dobry
+
+METODA 3: DYNAMICZNY Z MUTEXEM (kto wolny, ten bierze następny wiersz)
+------------------------------------------------------------------------
+UWAGA: Za każdym razem inna liczba iteracji na wątek (niedeterministyczne!)
+
+Wątków:   1 | Czas: 2.322s
+Wątków:   2 | Czas: 1.191s
+   Rozkład iteracji na wątek:
+      Wątek   0:    450909359 ( 49.95%) ████████████████████████
+      Wątek   1:    451772776 ( 50.05%) █████████████████████████
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         451341068 iteracji/wątek
+      Min (wątek 0):   450909359 (49.95% całości)
+      Max (wątek 1):   451772776 (50.05% całości)
+      Odch. std.:      431708
+      Balans:          99.81% (min/max ratio)
+      Ocena balansu:   ✓ DOSKONAŁY
+Wątków:   4 | Czas: 0.604s
+   Rozkład iteracji na wątek:
+      Wątek   0:    224829086 ( 24.91%) ████████████
+      Wątek   1:    226297425 ( 25.07%) ████████████
+      Wątek   2:    226313701 ( 25.07%) ████████████
+      Wątek   3:    225241923 ( 24.95%) ████████████
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         225670534 iteracji/wątek
+      Min (wątek 0):   224829086 (24.91% całości)
+      Max (wątek 2):   226313701 (25.07% całości)
+      Odch. std.:      651613
+      Balans:          99.34% (min/max ratio)
+      Ocena balansu:   ✓ DOSKONAŁY
+Wątków:   8 | Czas: 0.340s
+   Rozkład iteracji na wątek:
+      Wątek   0:    114404142 ( 12.67%) ██████
+      Wątek   1:    114162074 ( 12.65%) ██████
+      Wątek   2:    111147263 ( 12.31%) ██████
+      Wątek   3:    116306630 ( 12.88%) ██████
+      Wątek   4:    114452909 ( 12.68%) ██████
+      Wątek   5:    113195185 ( 12.54%) ██████
+      Wątek   6:    107970120 ( 11.96%) █████
+      Wątek   7:    111043812 ( 12.30%) ██████
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         112835267 iteracji/wątek
+      Min (wątek 6):   107970120 (11.96% całości)
+      Max (wątek 3):   116306630 (12.88% całości)
+      Odch. std.:      2468471
+      Balans:          92.83% (min/max ratio)
+      Ocena balansu:   ✓ Bardzo dobry
+Wątków:  16 | Czas: 0.296s
+   Rozkład iteracji na wątek:
+      Wątek   0:     53218046 (  5.90%) ██
+      Wątek   1:     56037054 (  6.21%) ███
+      Wątek   2:     60392436 (  6.69%) ███
+      Wątek   3:     54793123 (  6.07%) ███
+      Wątek   4:     56410608 (  6.25%) ███
+      Wątek   5:     54666600 (  6.06%) ███
+      Wątek   6:     54435658 (  6.03%) ███
+      Wątek   7:     54860720 (  6.08%) ███
+      Wątek   8:     86125261 (  9.54%) ████
+      Wątek   9:     53280874 (  5.90%) ██
+      Wątek  10:     52272751 (  5.79%) ██
+      Wątek  11:     50558926 (  5.60%) ██
+      Wątek  12:     57455703 (  6.36%) ███
+      Wątek  13:     51287242 (  5.68%) ██
+      Wątek  14:     52639843 (  5.83%) ██
+      Wątek  15:     54247290 (  6.01%) ███
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         56417633 iteracji/wątek
+      Min (wątek 11):   50558926 (5.60% całości)
+      Max (wątek 8):   86125261 (9.54% całości)
+      Odch. std.:      8017583
+      Balans:          58.70% (min/max ratio)
+      Ocena balansu:   ○ Średni
+Wątków:  32 | Czas: 0.296s
+   Rozkład iteracji na wątek:
+      Wątek   0:     29068228 (  3.22%) █
+      Wątek   1:     27876658 (  3.09%) █
+      Wątek   2:     31020503 (  3.44%) █
+      Wątek   3:     29770269 (  3.30%) █
+      Wątek   4:     24111646 (  2.67%) █
+      Wątek   5:     30970725 (  3.43%) █
+      Wątek   6:     28107733 (  3.11%) █
+      Wątek   7:     25228806 (  2.79%) █
+      Wątek   8:     26052375 (  2.89%) █
+      Wątek   9:     26900580 (  2.98%) █
+      Wątek  10:     28992305 (  3.21%) █
+      Wątek  11:     30234514 (  3.35%) █
+      Wątek  12:     26573030 (  2.94%) █
+      Wątek  13:     29548079 (  3.27%) █
+      Wątek  14:     30649206 (  3.40%) █
+      Wątek  15:     28073778 (  3.11%) █
+      Wątek  16:     25198745 (  2.79%) █
+      Wątek  17:     26852554 (  2.97%) █
+      Wątek  18:     25601275 (  2.84%) █
+      Wątek  19:     24418165 (  2.71%) █
+      Wątek  20:     27166166 (  3.01%) █
+      Wątek  21:     25764487 (  2.85%) █
+      Wątek  22:     29691061 (  3.29%) █
+      Wątek  23:     29949624 (  3.32%) █
+      Wątek  24:     30792581 (  3.41%) █
+      Wątek  25:     30138915 (  3.34%) █
+      Wątek  26:     27241385 (  3.02%) █
+      Wątek  27:     31883174 (  3.53%) █
+      Wątek  28:     30182966 (  3.34%) █
+      Wątek  29:     29983260 (  3.32%) █
+      Wątek  30:     29324368 (  3.25%) █
+      Wątek  31:     25314974 (  2.80%) █
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         28208817 iteracji/wątek
+      Min (wątek 4):   24111646 (2.67% całości)
+      Max (wątek 27):   31883174 (3.53% całości)
+      Odch. std.:      2178594
+      Balans:          75.62% (min/max ratio)
+      Ocena balansu:   ○ Dobry
+Wątków:  64 | Czas: 0.301s
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         14104408 iteracji/wątek
+      Min (wątek 37):   10885382 (1.21% całości)
+      Max (wątek 23):   19950127 (2.21% całości)
+      Odch. std.:      1810766
+      Balans:          54.56% (min/max ratio)
+      Ocena balansu:   ○ Średni
+Wątków: 128 | Czas: 0.302s
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         7052204 iteracji/wątek
+      Min (wątek 122):   3701986 (0.41% całości)
+      Max (wątek 105):   11581413 (1.28% całości)
+      Odch. std.:      1351096
+      Balans:          31.96% (min/max ratio)
+      Ocena balansu:   ✗ Słaby
+Wątków: 512 | Czas: 0.298s
+
+   Statystyki:
+      Suma:            902682135 iteracji
+      Średnia:         1763051 iteracji/wątek
+      Min (wątek 265):   0 (0.00% całości)
+      Max (wątek 18):   11533344 (1.28% całości)
+      Odch. std.:      2715160
+      Balans:          0.00% (min/max ratio)
+      Ocena balansu:   ✗✗ KATASTROFA
+
+========================================
+WYJAŚNIENIA:
+========================================
+1. CZASY SIĘ REDUKUJĄ pomimo > CPU:
+   - Do ~16 wątków: prawie liniowe przyspieszenie (ile rdzeni)
+   - Powyżej: spłaszczenie (wątki konkurują o te same rdzenie)
+   - Overhead: przełączanie kontekstu, cache misses
+
+2. BALANS OBCIĄŻENIA:
+   - Metoda 1 (bloki): Słaby - środek Mandelbrota liczy się dłużej
+   - Metoda 2 (roleta): Lepszy - praca równomiernie rozłożona
+   - Metoda 3 (mutex): Najlepszy - dynamiczne przydzielanie
+
+3. SEKCJA KRYTYCZNA (mutex):
+   - Fragment kodu gdzie tylko 1 wątek może być w danym momencie
+   - mtx.lock() = zamknij drzwi, tylko ja mogę wejść
+   - mtx.unlock() = otwórz drzwi, inni mogą wejść
+   - Chroni współdzieloną zmienną current_row
+
+4. DLACZEGO ZA KAŻDYM RAZEM INNA LICZBA (metoda 3):
+   - Zależy od schedulera systemu operacyjnego
+   - Który wątek "zdąży" pierwszy złapać wiersz = losowe
+   - To jest NIEDETERMINISTYCZNE zachowanie!
+
+Obrazki zapisane jako method{1,2,3}_*_{liczba_wątków}.ppm
+Każdy wątek ma inny odcień niebieskiego koloru!
