@@ -1,0 +1,139 @@
+========================================
+MANDELBROT SET - TESTY R├ôWNOLEG┼üO┼ÜCI
+Rozmiar: 6400x6400
+Max iteracji: 200
+========================================
+
+METODA 1: PODZIA┼ü NA BLOKI (ka┼╝dy w─ůtek ma sw├│j ci─ůg┼éy zakres wierszy)
+------------------------------------------------------------------------
+W─ůtk├│w:   1 | Czas: 4.927s
+W─ůtk├│w:   2 | Czas: 2.494s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 450979746 / 451341224 / 451702703
+   Balans obci─ů┼╝enia: 99.84%
+W─ůtk├│w:   4 | Czas: 2.537s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 18246087 / 225670612 / 433443585
+   Balans obci─ů┼╝enia: 4.21%
+W─ůtk├│w:   8 | Czas: 1.955s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 7438787 / 112835306 / 344716569
+   Balans obci─ů┼╝enia: 2.16%
+W─ůtk├│w:  16 | Czas: 1.332s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 3395567 / 56417653 / 205657116
+   Balans obci─ů┼╝enia: 1.65%
+W─ůtk├│w:  32 | Czas: 0.856s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 1577699 / 28208826 / 107743708
+   Balans obci─ů┼╝enia: 1.46%
+W─ůtk├│w:  64 | Czas: 0.724s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 745329 / 14104413 / 55322634
+   Balans obci─ů┼╝enia: 1.35%
+W─ůtk├│w: 128 | Czas: 0.605s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 357027 / 7052206 / 27982067
+   Balans obci─ů┼╝enia: 1.28%
+W─ůtk├│w: 512 - POMINI─śTO (iYmax musi by─ç podzielne)
+
+METODA 2: ROLETA (round-robin: w─ůtek i bierze wiersze i, i+n, i+2n, ...)
+------------------------------------------------------------------------
+W─ůtk├│w:   1 | Czas: 4.854s
+W─ůtk├│w:   2 | Czas: 2.683s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 451264782 / 451341224 / 451417667
+   Balans obci─ů┼╝enia: 99.97%
+W─ůtk├│w:   4 | Czas: 1.597s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 225628221 / 225670612 / 225789446
+   Balans obci─ů┼╝enia: 99.93%
+W─ůtk├│w:   8 | Czas: 0.919s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 112792788 / 112835306 / 112996658
+   Balans obci─ů┼╝enia: 99.82%
+W─ůtk├│w:  16 | Czas: 0.691s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 56388547 / 56417653 / 56569860
+   Balans obci─ů┼╝enia: 99.68%
+W─ůtk├│w:  32 | Czas: 0.613s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 28184620 / 28208826 / 28333856
+   Balans obci─ů┼╝enia: 99.47%
+W─ůtk├│w:  64 | Czas: 0.613s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 14072380 / 14104413 / 14261476
+   Balans obci─ů┼╝enia: 98.67%
+W─ůtk├│w: 128 | Czas: 0.582s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 6996717 / 7052206 / 7261400
+   Balans obci─ů┼╝enia: 96.35%
+W─ůtk├│w: 512 | Czas: 0.643s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 1656234 / 1763051 / 1848960
+   Balans obci─ů┼╝enia: 89.58%
+
+METODA 3: DYNAMICZNY Z MUTEXEM (kto wolny, ten bierze nast─Öpny wiersz)
+------------------------------------------------------------------------
+UWAGA: Za ka┼╝dym razem inna liczba iteracji na w─ůtek (niedeterministyczne!)
+
+W─ůtk├│w:   1 | Czas: 4.847s
+W─ůtk├│w:   2 | Czas: 2.722s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 450031543 / 451341224 / 452650906
+   Balans obci─ů┼╝enia: 99.42%
+W─ůtk├│w:   4 | Czas: 1.610s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 224808040 / 225670612 / 226402133
+   Balans obci─ů┼╝enia: 99.30%
+W─ůtk├│w:   8 | Czas: 0.910s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 111240217 / 112835306 / 113783200
+   Balans obci─ů┼╝enia: 97.77%
+W─ůtk├│w:  16 | Czas: 0.665s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 43669909 / 56417653 / 71223581
+   Balans obci─ů┼╝enia: 61.31%
+W─ůtk├│w:  32 | Czas: 0.630s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 0 / 28208826 / 57654001
+   Balans obci─ů┼╝enia: 0.00%
+W─ůtk├│w:  64 | Czas: 0.683s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 0 / 14104413 / 50010586
+   Balans obci─ů┼╝enia: 0.00%
+W─ůtk├│w: 128 | Czas: 0.630s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 0 / 7052206 / 52099092
+   Balans obci─ů┼╝enia: 0.00%
+W─ůtk├│w: 512 | Czas: 0.694s
+   Suma iteracji: 902682449
+   Min/Avg/Max: 0 / 1763051 / 57799778
+   Balans obci─ů┼╝enia: 0.00%
+
+========================================
+WYJA┼ÜNIENIA:
+========================================
+1. CZASY SI─ś REDUKUJ─ä pomimo > CPU:
+   - Do ~16 w─ůtk├│w: prawie liniowe przyspieszenie (ile rdzeni)
+   - Powy┼╝ej: sp┼éaszczenie (w─ůtki konkuruj─ů o te same rdzenie)
+   - Overhead: prze┼é─ůczanie kontekstu, cache misses
+
+2. BALANS OBCI─ä┼╗ENIA:
+   - Metoda 1 (bloki): S┼éaby - ┼Ťrodek Mandelbrota liczy si─Ö d┼éu┼╝ej
+   - Metoda 2 (roleta): Lepszy - praca r├│wnomiernie roz┼éo┼╝ona
+   - Metoda 3 (mutex): Najlepszy - dynamiczne przydzielanie
+
+3. SEKCJA KRYTYCZNA (mutex):
+   - Fragment kodu gdzie tylko 1 w─ůtek mo┼╝e by─ç w danym momencie
+   - mtx.lock() = zamknij drzwi, tylko ja mog─Ö wej┼Ť─ç
+   - mtx.unlock() = otw├│rz drzwi, inni mog─ů wej┼Ť─ç
+   - Chroni wsp├│┼édzielon─ů zmienn─ů current_row
+
+4. DLACZEGO ZA KA┼╗DYM RAZEM INNA LICZBA (metoda 3):
+   - Zale┼╝y od schedulera systemu operacyjnego
+   - Kt├│ry w─ůtek "zd─ů┼╝y" pierwszy z┼éapa─ç wiersz = losowe
+   - To jest NIEDETERMINISTYCZNE zachowanie!
+
+Obrazki zapisane jako method{1,2,3}_*_{liczba_w─ůtk├│w}.ppm
+Ka┼╝dy w─ůtek ma inny odcie┼ä niebieskiego koloru!
