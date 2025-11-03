@@ -6,110 +6,449 @@ Max iteracji: 200
 
 METODA 1: PODZIA┼ü NA BLOKI (ka┼╝dy w─ůtek ma sw├│j ci─ůg┼éy zakres wierszy)
 ------------------------------------------------------------------------
-W─ůtk├│w:   1 | Czas: 4.927s
-W─ůtk├│w:   2 | Czas: 2.494s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 450979746 / 451341224 / 451702703
-   Balans obci─ů┼╝enia: 99.84%
-W─ůtk├│w:   4 | Czas: 2.537s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 18246087 / 225670612 / 433443585
-   Balans obci─ů┼╝enia: 4.21%
-W─ůtk├│w:   8 | Czas: 1.955s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 7438787 / 112835306 / 344716569
-   Balans obci─ů┼╝enia: 2.16%
-W─ůtk├│w:  16 | Czas: 1.332s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 3395567 / 56417653 / 205657116
-   Balans obci─ů┼╝enia: 1.65%
-W─ůtk├│w:  32 | Czas: 0.856s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 1577699 / 28208826 / 107743708
-   Balans obci─ů┼╝enia: 1.46%
-W─ůtk├│w:  64 | Czas: 0.724s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 745329 / 14104413 / 55322634
-   Balans obci─ů┼╝enia: 1.35%
-W─ůtk├│w: 128 | Czas: 0.605s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 357027 / 7052206 / 27982067
-   Balans obci─ů┼╝enia: 1.28%
+W─ůtk├│w:   1 | Czas: 2.625s
+W─ůtk├│w:   2 | Czas: 1.369s
+   Rozk┼éad iteracji na w─ůtek:
+      W─ůtek   0:    450979746 ( 49.96%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   1:    451702703 ( 50.04%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         451341224 iteracji/w─ůtek
+      Min (w─ůtek 0):   450979746 (49.96% ca┼éo┼Ťci)
+      Max (w─ůtek 1):   451702703 (50.04% ca┼éo┼Ťci)
+      Odch. std.:      361478
+      Balans:          99.84% (min/max ratio)
+      Ocena balansu:   Ôťô DOSKONA┼üY
+W─ůtk├│w:   4 | Czas: 1.356s
+   Rozk┼éad iteracji na w─ůtek:
+      W─ůtek   0:     18246087 (  2.02%) Ôľł
+      W─ůtek   1:    432733659 ( 47.94%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   2:    433443585 ( 48.02%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   3:     18259118 (  2.02%) Ôľł
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         225670612 iteracji/w─ůtek
+      Min (w─ůtek 0):   18246087 (2.02% ca┼éo┼Ťci)
+      Max (w─ůtek 2):   433443585 (48.02% ca┼éo┼Ťci)
+      Odch. std.:      207418162
+      Balans:          4.21% (min/max ratio)
+      Ocena balansu:   ÔťŚÔťŚ KATASTROFA
+W─ůtk├│w:   8 | Czas: 1.066s
+   Rozk┼éad iteracji na w─ůtek:
+      W─ůtek   0:      7438787 (  0.82%)
+      W─ůtek   1:     10807300 (  1.20%)
+      W─ůtek   2:     88452705 (  9.80%) ÔľłÔľłÔľłÔľł
+      W─ůtek   3:    344280954 ( 38.14%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   4:    344716569 ( 38.19%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   5:     88727016 (  9.83%) ÔľłÔľłÔľłÔľł
+      W─ůtek   6:     10816098 (  1.20%)
+      W─ůtek   7:      7443020 (  0.82%)
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         112835306 iteracji/w─ůtek
+      Min (w─ůtek 0):   7438787 (0.82% ca┼éo┼Ťci)
+      Max (w─ůtek 4):   344716569 (38.19% ca┼éo┼Ťci)
+      Odch. std.:      137634172
+      Balans:          2.16% (min/max ratio)
+      Ocena balansu:   ÔťŚÔťŚ KATASTROFA
+W─ůtk├│w:  16 | Czas: 0.653s
+   Rozk┼éad iteracji na w─ůtek:
+      W─ůtek   0:      3395567 (  0.38%)
+      W─ůtek   1:      4043220 (  0.45%)
+      W─ůtek   2:      4532565 (  0.50%)
+      W─ůtek   3:      6274735 (  0.70%)
+      W─ůtek   4:     17635625 (  1.95%)
+      W─ůtek   5:     70817080 (  7.85%) ÔľłÔľłÔľł
+      W─ůtek   6:    138917409 ( 15.39%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   7:    205363545 ( 22.75%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   8:    205657116 ( 22.78%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   9:    139059453 ( 15.41%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek  10:     71020409 (  7.87%) ÔľłÔľłÔľł
+      W─ůtek  11:     17706607 (  1.96%)
+      W─ůtek  12:      6281274 (  0.70%)
+      W─ůtek  13:      4534824 (  0.50%)
+      W─ůtek  14:      4044354 (  0.45%)
+      W─ůtek  15:      3398666 (  0.38%)
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         56417653 iteracji/w─ůtek
+      Min (w─ůtek 0):   3395567 (0.38% ca┼éo┼Ťci)
+      Max (w─ůtek 8):   205657116 (22.78% ca┼éo┼Ťci)
+      Odch. std.:      72040182
+      Balans:          1.65% (min/max ratio)
+      Ocena balansu:   ÔťŚÔťŚ KATASTROFA
+W─ůtk├│w:  32 | Czas: 0.399s
+   Rozk┼éad iteracji na w─ůtek:
+      W─ůtek   0:      1577699 (  0.17%)
+      W─ůtek   1:      1817868 (  0.20%)
+      W─ůtek   2:      1965340 (  0.22%)
+      W─ůtek   3:      2077880 (  0.23%)
+      W─ůtek   4:      2169126 (  0.24%)
+      W─ůtek   5:      2363439 (  0.26%)
+      W─ůtek   6:      2761682 (  0.31%)
+      W─ůtek   7:      3513053 (  0.39%)
+      W─ůtek   8:      4422401 (  0.49%)
+      W─ůtek   9:     13213224 (  1.46%)
+      W─ůtek  10:     19083165 (  2.11%) Ôľł
+      W─ůtek  11:     51733915 (  5.73%) ÔľłÔľł
+      W─ůtek  12:     63612754 (  7.05%) ÔľłÔľłÔľł
+      W─ůtek  13:     75304655 (  8.34%) ÔľłÔľłÔľłÔľł
+      W─ůtek  14:     97832191 ( 10.84%) ÔľłÔľłÔľłÔľłÔľł
+      W─ůtek  15:    107531354 ( 11.91%) ÔľłÔľłÔľłÔľłÔľł
+      W─ůtek  16:    107743708 ( 11.94%) ÔľłÔľłÔľłÔľłÔľł
+      W─ůtek  17:     97913408 ( 10.85%) ÔľłÔľłÔľłÔľłÔľł
+      W─ůtek  18:     75397968 (  8.35%) ÔľłÔľłÔľłÔľł
+      W─ůtek  19:     63661485 (  7.05%) ÔľłÔľłÔľł
+      W─ůtek  20:     51850715 (  5.74%) ÔľłÔľł
+      W─ůtek  21:     19169694 (  2.12%) Ôľł
+      W─ůtek  22:     13266970 (  1.47%)
+      W─ůtek  23:      4439637 (  0.49%)
+      W─ůtek  24:      3517161 (  0.39%)
+      W─ůtek  25:      2764113 (  0.31%)
+      W─ůtek  26:      2365284 (  0.26%)
+      W─ůtek  27:      2169540 (  0.24%)
+      W─ůtek  28:      2078382 (  0.23%) 
+      W─ůtek  29:      1965972 (  0.22%)
+      W─ůtek  30:      1818740 (  0.20%)
+      W─ůtek  31:      1579926 (  0.18%)
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         28208827 iteracji/w─ůtek
+      Min (w─ůtek 0):   1577699 (0.17% ca┼éo┼Ťci)
+      Max (w─ůtek 16):   107743708 (11.94% ca┼éo┼Ťci)
+      Odch. std.:      36612931
+      Balans:          1.46% (min/max ratio)
+      Ocena balansu:   ÔťŚÔťŚ KATASTROFA
+W─ůtk├│w:  64 | Czas: 0.325s
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         14104413 iteracji/w─ůtek
+      Min (w─ůtek 0):   745329 (0.08% ca┼éo┼Ťci)
+      Max (w─ůtek 32):   55322634 (6.13% ca┼éo┼Ťci)
+      Odch. std.:      18344802
+      Balans:          1.35% (min/max ratio)
+      Ocena balansu:   ÔťŚÔťŚ KATASTROFA
+W─ůtk├│w: 128 | Czas: 0.324s
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         7052207 iteracji/w─ůtek
+      Min (w─ůtek 0):   357027 (0.04% ca┼éo┼Ťci)
+      Max (w─ůtek 64):   27982067 (3.10% ca┼éo┼Ťci)
+      Odch. std.:      9181478
+      Balans:          1.28% (min/max ratio)
+      Ocena balansu:   ÔťŚÔťŚ KATASTROFA
 W─ůtk├│w: 512 - POMINI─śTO (iYmax musi by─ç podzielne)
 
 METODA 2: ROLETA (round-robin: w─ůtek i bierze wiersze i, i+n, i+2n, ...)
 ------------------------------------------------------------------------
-W─ůtk├│w:   1 | Czas: 4.854s
-W─ůtk├│w:   2 | Czas: 2.683s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 451264782 / 451341224 / 451417667
-   Balans obci─ů┼╝enia: 99.97%
-W─ůtk├│w:   4 | Czas: 1.597s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 225628221 / 225670612 / 225789446
-   Balans obci─ů┼╝enia: 99.93%
-W─ůtk├│w:   8 | Czas: 0.919s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 112792788 / 112835306 / 112996658
-   Balans obci─ů┼╝enia: 99.82%
-W─ůtk├│w:  16 | Czas: 0.691s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 56388547 / 56417653 / 56569860
-   Balans obci─ů┼╝enia: 99.68%
-W─ůtk├│w:  32 | Czas: 0.613s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 28184620 / 28208826 / 28333856
-   Balans obci─ů┼╝enia: 99.47%
-W─ůtk├│w:  64 | Czas: 0.613s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 14072380 / 14104413 / 14261476
-   Balans obci─ů┼╝enia: 98.67%
-W─ůtk├│w: 128 | Czas: 0.582s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 6996717 / 7052206 / 7261400
-   Balans obci─ů┼╝enia: 96.35%
-W─ůtk├│w: 512 | Czas: 0.643s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 1656234 / 1763051 / 1848960
-   Balans obci─ů┼╝enia: 89.58%
+W─ůtk├│w:   1 | Czas: 2.667s
+W─ůtk├│w:   2 | Czas: 1.365s
+   Rozk┼éad iteracji na w─ůtek:
+      W─ůtek   0:    451417667 ( 50.01%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   1:    451264782 ( 49.99%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         451341224 iteracji/w─ůtek
+      Min (w─ůtek 1):   451264782 (49.99% ca┼éo┼Ťci)
+      Max (w─ůtek 0):   451417667 (50.01% ca┼éo┼Ťci)
+      Odch. std.:      76442
+      Balans:          99.97% (min/max ratio)
+      Ocena balansu:   Ôťô DOSKONA┼üY
+W─ůtk├│w:   4 | Czas: 0.697s
+   Rozk┼éad iteracji na w─ůtek:
+      W─ůtek   0:    225789446 ( 25.01%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   1:    225632391 ( 25.00%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   2:    225628221 ( 25.00%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   3:    225632391 ( 25.00%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         225670612 iteracji/w─ůtek
+      Min (w─ůtek 2):   225628221 (25.00% ca┼éo┼Ťci)
+      Max (w─ůtek 0):   225789446 (25.01% ca┼éo┼Ťci)
+      Odch. std.:      68630
+      Balans:          99.93% (min/max ratio)
+      Ocena balansu:   Ôťô DOSKONA┼üY
+W─ůtk├│w:   8 | Czas: 0.375s
+   Rozk┼éad iteracji na w─ůtek:
+      W─ůtek   0:    112996658 ( 12.52%) ÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   1:    112832552 ( 12.50%) ÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   2:    112814108 ( 12.50%) ÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   3:    112799839 ( 12.50%) ÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   4:    112792788 ( 12.50%) ÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   5:    112799839 ( 12.50%) ÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   6:    112814113 ( 12.50%) ÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   7:    112832552 ( 12.50%) ÔľłÔľłÔľłÔľłÔľłÔľł
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         112835306 iteracji/w─ůtek
+      Min (w─ůtek 4):   112792788 (12.50% ca┼éo┼Ťci)
+      Max (w─ůtek 0):   112996658 (12.52% ca┼éo┼Ťci)
+      Odch. std.:      62522
+      Balans:          99.82% (min/max ratio)
+      Ocena balansu:   Ôťô DOSKONA┼üY
+W─ůtk├│w:  16 | Czas: 0.322s
+   Rozk┼éad iteracji na w─ůtek:
+      W─ůtek   0:     56569860 (  6.27%) ÔľłÔľłÔľł
+      W─ůtek   1:     56408033 (  6.25%) ÔľłÔľłÔľł
+      W─ůtek   2:     56405389 (  6.25%) ÔľłÔľłÔľł
+      W─ůtek   3:     56388547 (  6.25%) ÔľłÔľłÔľł
+      W─ůtek   4:     56396394 (  6.25%) ÔľłÔľłÔľł
+      W─ůtek   5:     56411292 (  6.25%) ÔľłÔľłÔľł
+      W─ůtek   6:     56408723 (  6.25%) ÔľłÔľłÔľł
+      W─ůtek   7:     56424519 (  6.25%) ÔľłÔľłÔľł
+      W─ůtek   8:     56426798 (  6.25%) ÔľłÔľłÔľł
+      W─ůtek   9:     56424519 (  6.25%) ÔľłÔľłÔľł
+      W─ůtek  10:     56408719 (  6.25%) ÔľłÔľłÔľł
+      W─ůtek  11:     56411292 (  6.25%) ÔľłÔľłÔľł
+      W─ůtek  12:     56396394 (  6.25%) ÔľłÔľłÔľł
+      W─ůtek  13:     56388547 (  6.25%) ÔľłÔľłÔľł
+      W─ůtek  14:     56405390 (  6.25%) ÔľłÔľłÔľł
+      W─ůtek  15:     56408033 (  6.25%) ÔľłÔľłÔľł
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         56417653 iteracji/w─ůtek
+      Min (w─ůtek 3):   56388547 (6.25% ca┼éo┼Ťci)
+      Max (w─ůtek 0):   56569860 (6.27% ca┼éo┼Ťci)
+      Odch. std.:      40827
+      Balans:          99.68% (min/max ratio)
+      Ocena balansu:   Ôťô DOSKONA┼üY
+W─ůtk├│w:  32 | Czas: 0.305s
+   Rozk┼éad iteracji na w─ůtek:
+      W─ůtek   0:     28333856 (  3.14%) Ôľł
+      W─ůtek   1:     28187098 (  3.12%) Ôľł
+      W─ůtek   2:     28193127 (  3.12%) Ôľł
+      W─ůtek   3:     28184620 (  3.12%) Ôľł
+      W─ůtek   4:     28201546 (  3.12%) Ôľł
+      W─ůtek   5:     28204763 (  3.12%) Ôľł
+      W─ůtek   6:     28202795 (  3.12%) Ôľł
+      W─ůtek   7:     28215900 (  3.13%) Ôľł
+      W─ůtek   8:     28213399 (  3.13%) Ôľł
+      W─ůtek   9:     28208619 (  3.12%) Ôľł
+      W─ůtek  10:     28205928 (  3.12%) Ôľł
+      W─ůtek  11:     28206529 (  3.12%) Ôľł
+      W─ůtek  12:     28194848 (  3.12%) Ôľł
+      W─ůtek  13:     28203927 (  3.12%) Ôľł
+      W─ůtek  14:     28212263 (  3.13%) Ôľł
+      W─ůtek  15:     28220935 (  3.13%) Ôľł
+      W─ůtek  16:     28236004 (  3.13%) Ôľł
+      W─ůtek  17:     28220935 (  3.13%) Ôľł
+      W─ůtek  18:     28212262 (  3.13%) Ôľł
+      W─ůtek  19:     28203927 (  3.12%) Ôľł
+      W─ůtek  20:     28194848 (  3.12%) Ôľł
+      W─ůtek  21:     28206529 (  3.12%) Ôľł
+      W─ůtek  22:     28205928 (  3.12%) Ôľł
+      W─ůtek  23:     28208619 (  3.12%) Ôľł
+      W─ůtek  24:     28213399 (  3.13%) Ôľł
+      W─ůtek  25:     28215900 (  3.13%) Ôľł
+      W─ůtek  26:     28202791 (  3.12%) Ôľł
+      W─ůtek  27:     28204763 (  3.12%) Ôľł
+      W─ůtek  28:     28201546 (  3.12%) Ôľł
+      W─ůtek  29:     28184620 (  3.12%) Ôľł
+      W─ůtek  30:     28193127 (  3.12%) Ôľł
+      W─ůtek  31:     28187098 (  3.12%) Ôľł
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         28208827 iteracji/w─ůtek
+      Min (w─ůtek 3):   28184620 (3.12% ca┼éo┼Ťci)
+      Max (w─ůtek 0):   28333856 (3.14% ca┼éo┼Ťci)
+      Odch. std.:      25073
+      Balans:          99.47% (min/max ratio)
+      Ocena balansu:   Ôťô DOSKONA┼üY
+W─ůtk├│w:  64 | Czas: 0.290s
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         14104413 iteracji/w─ůtek
+      Min (w─ůtek 32):   14072380 (1.56% ca┼éo┼Ťci)
+      Max (w─ůtek 0):   14261476 (1.58% ca┼éo┼Ťci)
+      Odch. std.:      25311
+      Balans:          98.67% (min/max ratio)
+      Ocena balansu:   Ôťô DOSKONA┼üY
+W─ůtk├│w: 128 | Czas: 0.275s
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         7052207 iteracji/w─ůtek
+      Min (w─ůtek 63):   6996717 (0.78% ca┼éo┼Ťci)
+      Max (w─ůtek 0):   7261400 (0.80% ca┼éo┼Ťci)
+      Odch. std.:      41512
+      Balans:          96.35% (min/max ratio)
+      Ocena balansu:   Ôťô DOSKONA┼üY
+W─ůtk├│w: 512 | Czas: 0.296s
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         1763052 iteracji/w─ůtek
+      Min (w─ůtek 99):   1656234 (0.18% ca┼éo┼Ťci)
+      Max (w─ůtek 128):   1848960 (0.20% ca┼éo┼Ťci)
+      Odch. std.:      66081
+      Balans:          89.58% (min/max ratio)
+      Ocena balansu:   Ôťô Bardzo dobry
 
 METODA 3: DYNAMICZNY Z MUTEXEM (kto wolny, ten bierze nast─Öpny wiersz)
 ------------------------------------------------------------------------
 UWAGA: Za ka┼╝dym razem inna liczba iteracji na w─ůtek (niedeterministyczne!)
 
-W─ůtk├│w:   1 | Czas: 4.847s
-W─ůtk├│w:   2 | Czas: 2.722s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 450031543 / 451341224 / 452650906
-   Balans obci─ů┼╝enia: 99.42%
-W─ůtk├│w:   4 | Czas: 1.610s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 224808040 / 225670612 / 226402133
-   Balans obci─ů┼╝enia: 99.30%
-W─ůtk├│w:   8 | Czas: 0.910s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 111240217 / 112835306 / 113783200
-   Balans obci─ů┼╝enia: 97.77%
-W─ůtk├│w:  16 | Czas: 0.665s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 43669909 / 56417653 / 71223581
-   Balans obci─ů┼╝enia: 61.31%
-W─ůtk├│w:  32 | Czas: 0.630s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 0 / 28208826 / 57654001
-   Balans obci─ů┼╝enia: 0.00%
-W─ůtk├│w:  64 | Czas: 0.683s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 0 / 14104413 / 50010586
-   Balans obci─ů┼╝enia: 0.00%
-W─ůtk├│w: 128 | Czas: 0.630s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 0 / 7052206 / 52099092
-   Balans obci─ů┼╝enia: 0.00%
-W─ůtk├│w: 512 | Czas: 0.694s
-   Suma iteracji: 902682449
-   Min/Avg/Max: 0 / 1763051 / 57799778
-   Balans obci─ů┼╝enia: 0.00%
+W─ůtk├│w:   1 | Czas: 2.618s
+W─ůtk├│w:   2 | Czas: 1.328s
+   Rozk┼éad iteracji na w─ůtek:
+      W─ůtek   0:    452245791 ( 50.10%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   1:    450436658 ( 49.90%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         451341224 iteracji/w─ůtek
+      Min (w─ůtek 1):   450436658 (49.90% ca┼éo┼Ťci)
+      Max (w─ůtek 0):   452245791 (50.10% ca┼éo┼Ťci)
+      Odch. std.:      904566
+      Balans:          99.60% (min/max ratio)
+      Ocena balansu:   Ôťô DOSKONA┼üY
+W─ůtk├│w:   4 | Czas: 0.678s
+   Rozk┼éad iteracji na w─ůtek:
+      W─ůtek   0:    225911564 ( 25.03%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   1:    225718972 ( 25.01%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   2:    224809585 ( 24.90%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   3:    226242328 ( 25.06%) ÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľłÔľł
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         225670612 iteracji/w─ůtek
+      Min (w─ůtek 2):   224809585 (24.90% ca┼éo┼Ťci)
+      Max (w─ůtek 3):   226242328 (25.06% ca┼éo┼Ťci)
+      Odch. std.:      531183
+      Balans:          99.37% (min/max ratio)
+      Ocena balansu:   Ôťô DOSKONA┼üY
+W─ůtk├│w:   8 | Czas: 0.374s
+   Rozk┼éad iteracji na w─ůtek:
+      W─ůtek   0:    110035861 ( 12.19%) ÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   1:    113255533 ( 12.55%) ÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   2:    111850529 ( 12.39%) ÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   3:    113194530 ( 12.54%) ÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   4:    115824119 ( 12.83%) ÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   5:    113071642 ( 12.53%) ÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   6:    116993136 ( 12.96%) ÔľłÔľłÔľłÔľłÔľłÔľł
+      W─ůtek   7:    108457099 ( 12.01%) ÔľłÔľłÔľłÔľłÔľłÔľł
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         112835306 iteracji/w─ůtek
+      Min (w─ůtek 7):   108457099 (12.01% ca┼éo┼Ťci)
+      Max (w─ůtek 6):   116993136 (12.96% ca┼éo┼Ťci)
+      Odch. std.:      2611451
+      Balans:          92.70% (min/max ratio)
+      Ocena balansu:   Ôťô Bardzo dobry
+W─ůtk├│w:  16 | Czas: 0.266s
+   Rozk┼éad iteracji na w─ůtek:
+      W─ůtek   0:     50622103 (  5.61%) ÔľłÔľł
+      W─ůtek   1:     58926020 (  6.53%) ÔľłÔľłÔľł
+      W─ůtek   2:     41117148 (  4.55%) ÔľłÔľł
+      W─ůtek   3:     45763607 (  5.07%) ÔľłÔľł
+      W─ůtek   4:     60088276 (  6.66%) ÔľłÔľłÔľł
+      W─ůtek   5:     63397946 (  7.02%) ÔľłÔľłÔľł
+      W─ůtek   6:     78122664 (  8.65%) ÔľłÔľłÔľłÔľł
+      W─ůtek   7:     75806245 (  8.40%) ÔľłÔľłÔľłÔľł
+      W─ůtek   8:     42133638 (  4.67%) ÔľłÔľł
+      W─ůtek   9:     41061768 (  4.55%) ÔľłÔľł
+      W─ůtek  10:     65943440 (  7.31%) ÔľłÔľłÔľł
+      W─ůtek  11:     55959560 (  6.20%) ÔľłÔľłÔľł
+      W─ůtek  12:     74163069 (  8.22%) ÔľłÔľłÔľłÔľł
+      W─ůtek  13:     78120806 (  8.65%) ÔľłÔľłÔľłÔľł
+      W─ůtek  14:     37701938 (  4.18%) ÔľłÔľł
+      W─ůtek  15:     33754221 (  3.74%) Ôľł
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         56417653 iteracji/w─ůtek
+      Min (w─ůtek 15):   33754221 (3.74% ca┼éo┼Ťci)
+      Max (w─ůtek 6):   78122664 (8.65% ca┼éo┼Ťci)
+      Odch. std.:      14742244
+      Balans:          43.21% (min/max ratio)
+      Ocena balansu:   ÔŚő ┼Üredni
+W─ůtk├│w:  32 | Czas: 0.263s
+   Rozk┼éad iteracji na w─ůtek:
+      W─ůtek   0:     64809061 (  7.18%) ÔľłÔľłÔľł
+      W─ůtek   1:     42084796 (  4.66%) ÔľłÔľł
+      W─ůtek   2:     40091462 (  4.44%) ÔľłÔľł
+      W─ůtek   3:     40105134 (  4.44%) ÔľłÔľł
+      W─ůtek   4:     63590164 (  7.04%) ÔľłÔľłÔľł
+      W─ůtek   5:     40448871 (  4.48%) ÔľłÔľł
+      W─ůtek   6:     70646098 (  7.83%) ÔľłÔľłÔľł
+      W─ůtek   7:     45686330 (  5.06%) ÔľłÔľł
+      W─ůtek   8:     19805384 (  2.19%) Ôľł
+      W─ůtek   9:     17005711 (  1.88%)
+      W─ůtek  10:     40108794 (  4.44%) ÔľłÔľł
+      W─ůtek  11:     40207189 (  4.45%) ÔľłÔľł
+      W─ůtek  12:     19456949 (  2.16%) Ôľł
+      W─ůtek  13:     20516994 (  2.27%) Ôľł
+      W─ůtek  14:      7069596 (  0.78%)
+      W─ůtek  15:            0 (  0.00%)
+      W─ůtek  16:     60836418 (  6.74%) ÔľłÔľłÔľł
+      W─ůtek  17:     40481076 (  4.48%) ÔľłÔľł
+      W─ůtek  18:     19551489 (  2.17%) Ôľł
+      W─ůtek  19:     19635489 (  2.18%) Ôľł
+      W─ůtek  20:            0 (  0.00%)
+      W─ůtek  21:            0 (  0.00%)
+      W─ůtek  22:     34884134 (  3.86%) Ôľł
+      W─ůtek  23:     34829412 (  3.86%) Ôľł
+      W─ůtek  24:     19142411 (  2.12%) Ôľł
+      W─ůtek  25:     17038094 (  1.89%)
+      W─ůtek  26:            0 (  0.00%)
+      W─ůtek  27:            0 (  0.00%) 
+      W─ůtek  28:     32781541 (  3.63%) Ôľł
+      W─ůtek  29:     29156795 (  3.23%) Ôľł
+      W─ůtek  30:     12762295 (  1.41%)
+      W─ůtek  31:      9950762 (  1.10%)
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         28208827 iteracji/w─ůtek
+      Min (w─ůtek 15):   0 (0.00% ca┼éo┼Ťci)
+      Max (w─ůtek 6):   70646098 (7.83% ca┼éo┼Ťci)
+      Odch. std.:      19857817
+      Balans:          0.00% (min/max ratio)
+      Ocena balansu:   ÔťŚÔťŚ KATASTROFA
+W─ůtk├│w:  64 | Czas: 0.267s
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         14104413 iteracji/w─ůtek
+      Min (w─ůtek 33):   0 (0.00% ca┼éo┼Ťci)
+      Max (w─ůtek 7):   31414652 (3.48% ca┼éo┼Ťci)
+      Odch. std.:      14017090
+      Balans:          0.00% (min/max ratio)
+      Ocena balansu:   ÔťŚÔťŚ KATASTROFA
+W─ůtk├│w: 128 | Czas: 0.285s
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         7052207 iteracji/w─ůtek
+      Min (w─ůtek 16):   0 (0.00% ca┼éo┼Ťci)
+      Max (w─ůtek 4):   76055915 (8.43% ca┼éo┼Ťci)
+      Odch. std.:      19351512
+      Balans:          0.00% (min/max ratio)
+      Ocena balansu:   ÔťŚÔťŚ KATASTROFA
+W─ůtk├│w: 512 | Czas: 0.284s
+
+   Statystyki:
+      Suma:            902682449 iteracji
+      ┼Ürednia:         1763052 iteracji/w─ůtek
+      Min (w─ůtek 12):   0 (0.00% ca┼éo┼Ťci)
+      Max (w─ůtek 4):   77682054 (8.61% ca┼éo┼Ťci)
+      Odch. std.:      9106001
+      Balans:          0.00% (min/max ratio)
+      Ocena balansu:   ÔťŚÔťŚ KATASTROFA
 
 ========================================
 WYJA┼ÜNIENIA:

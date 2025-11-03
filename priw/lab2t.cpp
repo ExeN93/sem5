@@ -10,6 +10,7 @@
 #include <mutex>
 #include <vector>
 #include <iomanip>
+#include <cmath>
 
 const int iXmax = 6400; 
 const int iYmax = 6400;
@@ -239,20 +240,66 @@ void print_statistics(int num_threads) {
     long long total = 0;
     long long min_iter = iteration_count[0];
     long long max_iter = iteration_count[0];
+    int min_tid = 0, max_tid = 0;
     
     for(int i=0; i<num_threads; i++) {
         total += iteration_count[i];
-        if(iteration_count[i] < min_iter) min_iter = iteration_count[i];
-        if(iteration_count[i] > max_iter) max_iter = iteration_count[i];
+        if(iteration_count[i] < min_iter) {
+            min_iter = iteration_count[i];
+            min_tid = i;
+        }
+        if(iteration_count[i] > max_iter) {
+            max_iter = iteration_count[i];
+            max_tid = i;
+        }
     }
     
     double avg = (double)total / num_threads;
+    double std_dev = 0.0;
+    for(int i=0; i<num_threads; i++) {
+        double diff = iteration_count[i] - avg;
+        std_dev += diff * diff;
+    }
+    std_dev = sqrt(std_dev / num_threads);
     
-    std::cout << "   Suma iteracji: " << total << "\n";
-    std::cout << "   Min/Avg/Max: " << min_iter << " / " 
-              << (long long)avg << " / " << max_iter << "\n";
-    std::cout << "   Balans obciążenia: " << std::fixed << std::setprecision(2) 
-              << (100.0 * min_iter / max_iter) << "%\n";
+    // Pokaż rozkład iteracji dla każdego wątku (ale nie dla >32 wątków - za dużo)
+    if(num_threads <= 32) {
+        std::cout << "   Rozkład iteracji na wątek:\n";
+        for(int i=0; i<num_threads; i++) {
+            double percent = 100.0 * iteration_count[i] / total;
+            std::cout << "      Wątek " << std::setw(3) << i << ": " 
+                      << std::setw(12) << iteration_count[i] 
+                      << " (" << std::fixed << std::setprecision(2) << std::setw(6) << percent << "%)"
+                      << " ";
+            // Wizualizacja paskowa
+            int bars = (int)(percent / 2);  // Skala: 50% = 25 kresek
+            for(int b=0; b<bars; b++) std::cout << "█";
+            std::cout << "\n";
+        }
+    }
+    
+    std::cout << "\n   Statystyki:\n";
+    std::cout << "      Suma:            " << total << " iteracji\n";
+    std::cout << "      Średnia:         " << std::fixed << std::setprecision(0) << avg << " iteracji/wątek\n";
+    std::cout << "      Min (wątek " << min_tid << "):   " << min_iter 
+              << " (" << std::fixed << std::setprecision(2) << (100.0 * min_iter / total) << "% całości)\n";
+    std::cout << "      Max (wątek " << max_tid << "):   " << max_iter 
+              << " (" << std::fixed << std::setprecision(2) << (100.0 * max_iter / total) << "% całości)\n";
+    std::cout << "      Odch. std.:      " << std::fixed << std::setprecision(0) << std_dev << "\n";
+    std::cout << "      Balans:          " << std::fixed << std::setprecision(2) 
+              << (100.0 * min_iter / max_iter) << "% (min/max ratio)\n";
+    
+    // Oceń jakość balansu
+    double balance = 100.0 * min_iter / max_iter;
+    std::cout << "      Ocena balansu:   ";
+    if(balance > 95) std::cout << "✓ DOSKONAŁY";
+    else if(balance > 80) std::cout << "✓ Bardzo dobry";
+    else if(balance > 60) std::cout << "○ Dobry";
+    else if(balance > 40) std::cout << "○ Średni";
+    else if(balance > 20) std::cout << "✗ Słaby";
+    else if(balance > 5) std::cout << "✗ Bardzo słaby";
+    else std::cout << "✗✗ KATASTROFA";
+    std::cout << "\n";
 }
 
 int main() {
