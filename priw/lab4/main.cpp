@@ -108,7 +108,7 @@ void run_test(int iXmax, int iYmax, int numThreads)
         double Cx, Cy;
         double Zx, Zy, Zx2, Zy2;
 
-        #pragma omp for schedule(dynamic)
+        #pragma omp for schedule(dynamic,20)
         for (iY = 0; iY < iYmax; iY++)
         {
             Cy = CyMin + iY * PixelHeight;
