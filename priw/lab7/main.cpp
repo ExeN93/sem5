@@ -9,9 +9,9 @@ const double CxMax =  1.5;
 const double CyMin = -2.0;
 const double CyMax =  2.0;
 
-const int    IterationMax   = 200;
-const double EscapeRadius   = 2.0;
-const double ER2            = 4.0;
+const int    IterationMax = 200;
+const double EscapeRadius = 2.0;
+const double ER2 = 4.0;
 const int    MaxColorComponentValue = 255;
 
 void run_test(int iXmax, int iYmax, int numThreads)
